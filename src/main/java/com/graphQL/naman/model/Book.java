@@ -1,12 +1,11 @@
 package com.graphQL.naman.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Data
 @AllArgsConstructor
@@ -15,10 +14,9 @@ import javax.persistence.Table;
 @Table
 public class Book {
 
-    @Id
-    private String isn;
-    private String title;
-    private String publisher;
-    private String[] authors;
-    private String publishedDate;
+  @Id private String isn;
+  private String title;
+  private String publisher;
+  private String[] authors;
+  private String publishedDate;
 }

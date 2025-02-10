@@ -9,12 +9,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class BookDataFetcher implements DataFetcher<Book> {
-    @Autowired
-    BookRepository repository;
+  @Autowired BookRepository repository;
 
-    @Override
-    public Book get(DataFetchingEnvironment environment) throws Exception {
-        String isn=environment.getArgument("id");
-        return repository.findById(isn).get();
-    }
+  @Override
+  public Book get(DataFetchingEnvironment environment) throws Exception {
+    String isn = environment.getArgument("id");
+    return repository.findById(isn).get();
+  }
 }
